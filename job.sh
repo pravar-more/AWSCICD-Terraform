@@ -1,5 +1,16 @@
 #!/bin/bash
 
+################
+################
+#Define Variables
+AWS_ACCESS_KEY = ""
+AWS_SECRET_KEY = ""
+REGION = ""
+KEY_NAME = ""
+JENKINS_MACHINE_IP = ""
+
+
+
 #install git
 sudo yum install git -y
 
@@ -48,4 +59,20 @@ echo "Hostname:"
 hostname
 
 echo "Setup complete!"
+
+######################################################
+######################################################
+#Provisioning Terraform Resources
+cd /modules/jenkinsEC2
+terraform init
+terraform validate
+terraform fmt
+terraform plan
+terraform apply -var 'AWS_ACCESS_KEY=${AWS_ACCESS_KEY}' -var 'AWS_SECRET_KEY=${AWS_SECRET_KEY}' -var 'REGION=${REGION}'
+yes
+# Capture the output variable value 
+JENKINS_MACHINE_IP=$(terraform output -raw instance_public_ip) 
+# Use the captured value 
+echo "The IP address of the Jenkins instance is: $JENKINS_MACHINE_IP"
+
 
