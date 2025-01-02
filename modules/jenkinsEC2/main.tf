@@ -23,7 +23,7 @@ resource "aws_security_group" "main" {
     }
 
     tags = {
-        NAME = var.sg_name
+        Name = var.sg_name
 
     }
 }
