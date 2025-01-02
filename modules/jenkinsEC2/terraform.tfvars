@@ -13,4 +13,5 @@ AMI_MAP = {
     } 
 INSTANCE_NAME = "CustomEC2_terraform"
 INSTANCE_TYPE = "t2.micro"
-KEY_NAME = "NVirginia-Key"
+#KEY_NAME = "NVirginia-Key"
+KEY_NAME = ""
