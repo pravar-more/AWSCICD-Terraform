@@ -63,7 +63,7 @@ echo "Setup complete!"
 ######################################################
 ######################################################
 #Provisioning Terraform Resources
-cd /modules/jenkinsEC2
+cd ./AWSCICD-Terraform/modules/jenkinsEC2
 terraform init
 terraform validate
 terraform fmt
