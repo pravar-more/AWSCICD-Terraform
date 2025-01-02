@@ -9,7 +9,10 @@ REGION = "us-east-1"
 KEY_NAME = "NVirginia_key_VBanner"
 JENKINS_MACHINE_IP = ""
 
-
+# Export AWS keys as environment variables 
+export AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY 
+export AWS_SECRET_ACCESS_KEY=$AWS_SECRET_KEY
+export REGION=$REGION
 
 #install git
 sudo yum install git -y
