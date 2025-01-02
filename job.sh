@@ -67,9 +67,11 @@ echo "Setup complete!"
 ######################################################
 #AWS Configure
 aws configure
-AKIAQQABDQUAVYOYYA4Q
-6s+gghOvBy5Z+z2b6Pr74np4H9N1aP/HqOd3t624
-us-east-1
+$AWS_ACCESS_KEY
+$AWS_SECRET_KEY
+$REGION
+table
+
 
 #Provisioning Terraform Resources
 cd ./AWSCICD-Terraform/modules/jenkinsEC2
