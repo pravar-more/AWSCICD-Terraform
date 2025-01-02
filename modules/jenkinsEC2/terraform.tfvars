@@ -11,7 +11,7 @@ AMI_MAP = {
         "us-east-1" = "ami-0453ec754f44f9a4a" 
         # Add other regions and their corresponding AMI IDs 
     } 
-INSTANCE_NAME = "CustomEC2_terraform"
+INSTANCE_NAME = "JenkinsEC2"
 INSTANCE_TYPE = "t2.micro"
 #KEY_NAME = "NVirginia-Key"
 KEY_NAME = ""
