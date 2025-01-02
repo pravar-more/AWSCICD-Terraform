@@ -35,7 +35,7 @@ resource "aws_instance"  "main" {
     key_name = var.KEY_NAME 
     security_groups = [aws_security_group.main.name]
     tags = {
-        NAME = var.INSTANCE_NAME
+        Name = var.INSTANCE_NAME
     }
     user_data = <<-EOF
         #!/bin/bash
