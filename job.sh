@@ -67,7 +67,7 @@ cd /modules/jenkinsEC2
 terraform init
 terraform validate
 terraform fmt
-terraform plan
+#terraform plan
 terraform apply -var 'AWS_ACCESS_KEY=${AWS_ACCESS_KEY}' -var 'AWS_SECRET_KEY=${AWS_SECRET_KEY}' -var 'REGION=${REGION}'
 yes
 # Capture the output variable value
