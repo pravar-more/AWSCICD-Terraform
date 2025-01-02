@@ -13,8 +13,7 @@ hostname
 
 ####
 
+TO run the .sh file
+chmod +x job.sh
+./job.sh
 
-
-
-####
-####
