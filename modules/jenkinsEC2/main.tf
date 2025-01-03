@@ -4,6 +4,7 @@ data "aws_security_group" "existing_sg" {
         name = "group-name" 
         values = [var.sg_name] 
     }
+    depends_on = [aws_security_group.main]
     count = var.create_sg ? 0 : 1
 }
 
