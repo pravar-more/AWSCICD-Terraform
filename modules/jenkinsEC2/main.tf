@@ -43,7 +43,7 @@ resource "aws_security_group" "main" {
 }
 
 locals {
-    sg_id = var.create_sg ? aws_security_group.main[0].id : data.aws_security_group.existing_sg[0].id 
+    sg_id = var.create_sg ? data.aws_security_group.existing_sg[0].id : aws_security_group.main[0].id 
 }
 
 # Check if instance exists 
@@ -59,7 +59,7 @@ data "aws_instance" "existing_instance" {
 
 resource "aws_instance"  "main" {
     #count = length(data.aws_instance.existing_instance.id) == 0 ? 1 : 0
-    count = var.create_instance ? 1 : 0
+    count = var.create_instance ? 0 : 1
     ami = lookup(var.AMI_MAP, var.REGION, "ami-005fc0f236362e99f")
     instance_type = var.INSTANCE_TYPE 
     key_name = var.KEY_NAME 
