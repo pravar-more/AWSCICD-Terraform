@@ -5,14 +5,12 @@ data "aws_security_group" "existing_sg" {
         name = "group-name" 
         values = [var.sg_name] 
     }
-    count = var.create_sg ? 1 : 0    
     depends_on = [aws_security_group.main]
 }
 
 
 resource "aws_security_group" "main" {
-    #count = length(data.aws_security_group.existing_sg.id) == 0 ? 1 : 0
-    count = var.create_sg ? 1 : 0
+    count = length(data.aws_security_group.existing_sg.id) == 0 ? 1 : 0
     name = var.sg_name
     
     ingress {
@@ -42,8 +40,8 @@ resource "aws_security_group" "main" {
     }
 }
 
-locals {
-    sg_id = var.create_sg ? data.aws_security_group.existing_sg[0].id : aws_security_group.main[0].id 
+locals { 
+    sg_id = length(data.aws_security_group.existing_sg.id) > 0 ? data.aws_security_group.main[0].id : aws_security_group.example_sg[0].id 
 }
 
 # Check if instance exists 
@@ -52,12 +50,10 @@ data "aws_instance" "existing_instance" {
         name = "tag:Name" 
         values = [var.INSTANCE_NAME] 
     } 
-    count = var.create_instance ? 1 : 0
 }
 
 resource "aws_instance" "main1" {
-#   count = length(data.aws_instance.existing_instance.id) == 0 ? 1 : 0
-    count = var.create_instance ? 0 : 1
+    count = length(data.aws_instance.existing_instance.ids) == 0 ? 1 : 0
     ami = lookup(var.AMI_MAP, var.REGION, "ami-005fc0f236362e99f")
 #   ami = "ami-005fc0f236362e99f"
     instance_type = var.INSTANCE_TYPE 
