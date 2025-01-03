@@ -22,10 +22,10 @@ variable "availability_zones" {
 #
 #}
 variable "create_sg" {
-  default = false
+  default = true
 } 
 variable "create_instance" {
-  default = false
+  default = true
 }
 variable "sg_name"{
     type = string
