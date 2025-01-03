@@ -43,7 +43,7 @@ resource "aws_security_group" "main" {
 data "aws_instance" "existing_instance" {
     filter { 
         name = "tag:Name" 
-        values = [var.instance_name] 
+        values = [var.INSTANCE_NAME] 
     } 
 }
 
