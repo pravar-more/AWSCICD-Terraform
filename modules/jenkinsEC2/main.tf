@@ -5,7 +5,7 @@ data "aws_security_group" "existing_sg" {
         name = "group-name" 
         values = [var.sg_name] 
     }
-    depends_on = [aws_security_group.main]
+    #depends_on = [aws_security_group.main]
 }
 
 
@@ -53,7 +53,7 @@ data "aws_instance" "existing_instance" {
 }
 
 resource "aws_instance" "main1" {
-    count = length(data.aws_instance.existing_instance.ids) == 0 ? 1 : 0
+    count = length(data.aws_instance.existing_instance.id) == 0 ? 1 : 0
     ami = lookup(var.AMI_MAP, var.REGION, "ami-005fc0f236362e99f")
 #   ami = "ami-005fc0f236362e99f"
     instance_type = var.INSTANCE_TYPE 
