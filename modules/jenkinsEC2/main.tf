@@ -12,7 +12,7 @@ data "aws_security_group" "existing_sg" {
 
 resource "aws_security_group" "main" {
     #count = length(data.aws_security_group.existing_sg.id) == 0 ? 1 : 0
-    count = var.create_sg ? 0 : 1
+    count = var.create_sg ? 1 : 0
     name = var.sg_name
     
     ingress {
@@ -43,7 +43,7 @@ resource "aws_security_group" "main" {
 }
 
 locals {
-    sg_id = var.create_sg ? data.aws_security_group.existing_sg[0].id : aws_security_group.main.id 
+    sg_id = var.create_sg ? data.aws_security_group.existing_sg[0].id : aws_security_group.main[0].id 
 }
 
 # Check if instance exists 
