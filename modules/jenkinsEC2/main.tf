@@ -62,7 +62,7 @@ resource "aws_instance"  "main" {
     instance_type = var.INSTANCE_TYPE 
     key_name = var.KEY_NAME 
     #security_groups = count.index == 0 ? [aws_security_group.main[0].id] : data.aws_security_group.existing_sg[0].id
-    security_groups = [locals.sg_id]
+    security_groups = [local.sg_id]
     tags = {
         Name = var.INSTANCE_NAME
     }
