@@ -8,7 +8,7 @@ data "aws_security_group" "existing_sg" {
 
 
 resource "aws_security_group" "main" {
-    count = length(data.aws_security_group.existing_sg.ids) == 0 ? 1 : 0
+    count = length(data.aws_security_group.existing_sg.id) == 0 ? 1 : 0
     name = var.sg_name
     
     ingress {
@@ -50,7 +50,7 @@ data "aws_instance" "existing_instance" {
 
 
 resource "aws_instance"  "main" {
-    count = length(data.aws_instance.existing_instance.ids) == 0 ? 1 : 0
+    count = length(data.aws_instance.existing_instance.id) == 0 ? 1 : 0
     ami = lookup(var.AMI_MAP, var.REGION, "ami-005fc0f236362e99f")
     instance_type = var.INSTANCE_TYPE 
     key_name = var.KEY_NAME 
