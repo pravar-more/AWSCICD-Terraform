@@ -1,4 +1,14 @@
+# Check if security group exists 
+data "aws_security_group" "existing_sg" { 
+    filter {
+        name = "group-name" 
+        values = [var.sg_name] 
+    } 
+}
+
+
 resource "aws_security_group" "main" {
+    count = length(data.aws_security_group.existing_sg.ids) == 0 ? 1 : 0
     name = var.sg_name
     
     ingress {
@@ -29,7 +39,18 @@ resource "aws_security_group" "main" {
 }
 
 
+# Check if instance exists 
+data "aws_instance" "existing_instance" {
+    filter { 
+        name = "tag:Name" 
+        values = [var.instance_name] 
+    } 
+}
+
+
+
 resource "aws_instance"  "main" {
+    count = length(data.aws_instance.existing_instance.ids) == 0 ? 1 : 0
     ami = lookup(var.AMI_MAP, var.REGION, "ami-005fc0f236362e99f")
     instance_type = var.INSTANCE_TYPE 
     key_name = var.KEY_NAME 
