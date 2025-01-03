@@ -50,6 +50,7 @@ data "aws_instance" "existing_instance" {
         name = "tag:Name" 
         values = [var.INSTANCE_NAME] 
     } 
+    count = length(var.INSTANCE_NAME) > 0 ? 1 : 0
 }
 
 resource "aws_instance" "main1" {
