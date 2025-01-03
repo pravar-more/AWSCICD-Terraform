@@ -41,7 +41,7 @@ resource "aws_security_group" "main" {
 }
 
 locals { 
-    sg_id = length(data.aws_security_group.existing_sg.id) > 0 ? data.aws_security_group.existing_sg[0].id : aws_security_group.main[0].id 
+    sg_id = length(data.aws_security_group.existing_sg.id) > 0 ? data.aws_security_group.existing_sg.id : aws_security_group.main[0].id 
 }
 
 # Check if instance exists 
