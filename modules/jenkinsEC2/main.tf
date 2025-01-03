@@ -43,7 +43,7 @@ resource "aws_security_group" "main" {
 }
 
 locals {
-    sg_id = var.create_sg ? data.aws_security_group.existing_sg[0].id : aws_security_group.main[0].id 
+    sg_id = var.create_sg ? data.aws_security_group.existing_sg[0].id : aws_security_group.main.id 
 }
 
 # Check if instance exists 
