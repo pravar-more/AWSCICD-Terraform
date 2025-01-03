@@ -67,10 +67,10 @@ echo "Setup complete!"
 ######################################################
 #AWS Configure
 aws configure
-$AWS_ACCESS_KEY
-$AWS_SECRET_KEY
-$REGION
-table
+#$AWS_ACCESS_KEY
+#$AWS_SECRET_KEY
+#$REGION
+#table
 
 
 #Provisioning Terraform Resources
