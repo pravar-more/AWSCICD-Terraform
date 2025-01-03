@@ -52,10 +52,8 @@ data "aws_instance" "existing_instance" {
         name = "tag:Name" 
         values = [var.INSTANCE_NAME] 
     } 
-    count = var.create_instance ? 0 : 1
+    count = var.create_instance ? 1 : 0
 }
-
-
 
 resource "aws_instance"  "main" {
     #count = length(data.aws_instance.existing_instance.id) == 0 ? 1 : 0
