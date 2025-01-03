@@ -88,3 +88,7 @@ terraform apply -auto-approve tfplan
 JENKINS_MACHINE_IP=$(terraform output -raw instance_public_ip)
 # Use the captured value
 echo "The IP address of the Jenkins instance is: $JENKINS_MACHINE_IP"
+###########################################################################
+###########################################################################
+#Ansible Playbook configurations
+#ansible-playbook <playbookFile.yaml>
