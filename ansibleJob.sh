@@ -12,4 +12,5 @@ jenkinsMachine ansible_host=$JENKINS_MACHINE_IP
 [eks] 
 " > ./playbooks/inventory1.ini
 cd ./playbooks
+
 ansible-playbook jenkinsMachinePlaybook.yaml
