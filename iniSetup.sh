@@ -53,10 +53,9 @@ fi
 echo "Hostname:"
 hostname
 
-##################################################
-#ssh key generate
-ssh-keygen -t "" -b "" -f "" -N ""
-cat $HOME/.ssh/id_rsa.pub
+#key gen
+./ssh-keygenJob.sh
+
 echo "Setup complete!"
 
 cd

@@ -9,9 +9,10 @@ echo $(cat /tmp/my_var_file)
 
 echo "in ansibleJob.sh"
 
+#key gen
+./ssh-keygenJob.sh
 ###########################################################################
 #coping ssh key to remote servers
-
 ssh-copy-id $JENKINS_MACHINE_IP
 
 
