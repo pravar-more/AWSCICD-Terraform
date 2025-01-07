@@ -54,9 +54,6 @@ fi
 echo "Hostname:"
 hostname
 
-#key gen
-./ssh-keygenJob.sh
-
 echo "Setup complete!"
 
 cd
