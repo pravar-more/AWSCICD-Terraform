@@ -71,3 +71,4 @@ aws configure
 #$AWS_SECRET_KEY
 #$REGION
 #table
+cd ./AWSCICD-Terraform/
