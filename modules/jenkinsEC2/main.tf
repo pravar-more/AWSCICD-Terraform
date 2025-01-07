@@ -59,7 +59,7 @@ resource "aws_instance" "main1" {
 #   ami = "ami-005fc0f236362e99f"
     instance_type = var.INSTANCE_TYPE 
     key_name = var.KEY_NAME 
-    vpc_security_group_id = [aws_security_group.main.id]
+    vpc_security_group_ids = [aws_security_group.main.id]
 #    security_groups = [local.sg_id]
     tags = {
         Name = var.INSTANCE_NAME
