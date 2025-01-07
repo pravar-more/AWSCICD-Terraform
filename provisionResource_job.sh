@@ -24,7 +24,7 @@ aws configure
 -
 
 #Provisioning Terraform Resources
-cd ./AWSCICD-Terraform/modules/jenkinsEC2
+cd ./modules/jenkinsEC2
 terraform init
 terraform validate
 terraform fmt
