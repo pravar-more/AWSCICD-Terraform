@@ -39,4 +39,5 @@ JENKINS_MACHINE_IP=$(terraform output -raw instance_public_ip)
 # Use the captured value
 echo "The IP address of the Jenkins instance is: $JENKINS_MACHINE_IP"
 #####################################
-export JENKINS_MACHINE_IP="000"
+export JENKINS_MACHINE_IP
+echo $JENKINS_MACHINE_IP > /tmp/my_var_file
