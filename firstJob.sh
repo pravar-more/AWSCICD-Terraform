@@ -33,4 +33,6 @@ echo "0000000000000000000"
 cd $HOME/AWSCICD-Terraform/jobs/
 chmod +x mainJob.sh
 ls $HOME/AWSCICD-Terraform/
+echo "--------"
+ls $HOME/
 cd
