@@ -30,8 +30,8 @@ echo "Setup complete!"
 
 ######################################################
 echo "0000000000000000000"
-cd $HOME/AWSCICD-Terraform/
+cd $HOME/AWSCICD-Terraform/jobs/
 ls
-cd $HOME/AWSCICD-Terraform/
+cd $HOME/AWSCICD-Terraform/jobs/
 chmod +x mainJob.sh
 cd
