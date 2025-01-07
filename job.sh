@@ -3,7 +3,7 @@ chmod +x iniSetup.sh
 #############################
 #provisionResource Terraform
 chmod +x provisionResource.sh
-./provisionResource.sh
+./provisionResource_job.sh
 #############################
 chmod +x ansibleJob.sh
 ./ansibleJob.sh
