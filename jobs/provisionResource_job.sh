@@ -11,12 +11,6 @@ JENKINS_MACHINE_IP = ""
 
 ######################################################
 #AWS Configure
-
-# Define your AWS credentials and default region
-AWS_ACCESS_KEY = "AKIAQQABDQUAVYOYYA4Q"
-AWS_SECRET_KEY = "6s+gghOvBy5Z+z2b6Pr74np4H9N1aP/HqOd3t624"
-REGION = "us-east-1"
-
 # Define your AWS credentials and default region
 AWS_ACCESS_KEY_ID="AKIAQQABDQUAVYOYYA4Q"
 AWS_SECRET_ACCESS_KEY="6s+gghOvBy5Z+z2b6Pr74np4H9N1aP/HqOd3t624"
