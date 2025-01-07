@@ -11,5 +11,4 @@ echo "[jenkinsMachine]
 $JENKINS_MACHINE_IP 
 [eks] 
 " > ./playbooks/inventory1.ini
-
-#ansible-playbook jenkinsMachinePlaybook.yaml
+ansible-playbook jenkinsMachinePlaybook.yaml
