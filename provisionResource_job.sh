@@ -18,10 +18,10 @@ export REGION=$REGION
 ######################################################
 #AWS Configure
 aws configure
--$AWS_ACCESS_KEY
--$AWS_SECRET_KEY
--$REGION
--
+$AWS_ACCESS_KEY
+$AWS_SECRET_KEY
+$REGION
+
 
 #Provisioning Terraform Resources
 cd ./modules/jenkinsEC2
