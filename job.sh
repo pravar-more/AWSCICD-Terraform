@@ -92,3 +92,5 @@ echo "The IP address of the Jenkins instance is: $JENKINS_MACHINE_IP"
 ###########################################################################
 #Ansible Playbook configurations
 #ansible-playbook <playbookFile.yaml>
+echo "[jenkinEC2] $JENKINS_MACHINE_IP \n [eks] " > ./playbooks/inventory1.ini
+ansible-playbook jenkinsMachinePlaybook.yaml
