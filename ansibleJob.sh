@@ -1,3 +1,5 @@
+#!/bin/bash
+
 ###########################################################################
 #Ansible Playbook configurations
 #ansible-playbook <playbookFile.yaml>
