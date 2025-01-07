@@ -21,7 +21,7 @@ ssh-copy-id $JENKINS_MACHINE_IP
 echo "[ec2Server] 
 jenkinsMachine ansible_host=$JENKINS_MACHINE_IP
 [eks] 
-" > ./playbooks/inventory1.ini
-cd ./playbooks
+" > $HOME/AWSCICD-Terraform/playbooks/inventory1.ini
+cd $HOME/AWSCICD-Terraform/playbooks/
 
 ansible-playbook jenkinsMachinePlaybook.yaml
