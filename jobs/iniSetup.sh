@@ -9,9 +9,6 @@
 #install git
 sudo yum install git -y
 
-#clone repo
-#git clone https://github.com/pravar-more/AWSCICD-Terraform.git
-
 #git remote
 git remote add origin https://github.com/pravar-more/AWSCICD-Terraform.git
 

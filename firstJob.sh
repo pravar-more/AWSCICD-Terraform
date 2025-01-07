@@ -3,10 +3,9 @@
 ################
 ################
 #Define Variables
-REGION = "us-east-1"
-KEY_NAME = "NVirginia_key_VBanner"
-JENKINS_MACHINE_IP = ""
 
+#install git
+sudo yum install git -y
 
 #clone repo
 git clone https://github.com/pravar-more/AWSCICD-Terraform.git
@@ -30,9 +29,8 @@ hostname
 echo "Setup complete!"
 
 ######################################################
-cd
 echo "0000000000000000000"
 ls
-cd AWSCICD-Terraform/
+cd $HOME/AWSCICD-Terraform/
 chmod +x mainJob.sh
 cd
