@@ -16,8 +16,8 @@ AWS_ACCESS_KEY = "AKIAQQABDQUAVYOYYA4Q"
 AWS_SECRET_KEY = "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"
 REGION = "us-east-1"
 # Export AWS keys as environment variables 
-export AWS_ACCESS_KEY_ID
-export AWS_SECRET_ACCESS_KEY
+export AWS_ACCESS_KEY
+export AWS_SECRET_KEY
 export REGION
 
 # Configure AWS CLI
