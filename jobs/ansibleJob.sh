@@ -11,7 +11,7 @@ echo "in ansibleJob.sh"
 
 ###########################################################################
 #coping ssh key to remote servers
-ssh-copy-id $JENKINS_MACHINE_IP
+#ssh-copy-id $JENKINS_MACHINE_IP    ##need to work on this one  
 
 
 

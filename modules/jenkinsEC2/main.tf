@@ -65,6 +65,8 @@ resource "aws_instance" "main1" {
     }
     user_data = <<-EOF
         #!/bin/bash
+        sleep 80
+        
         echo "Hello, World" > /var/www/html/index.html
         EOF
  }
