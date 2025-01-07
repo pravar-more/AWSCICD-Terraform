@@ -7,7 +7,7 @@ chmod +x iniSetup.sh provisionResource_job.sh ansibleJob.sh ssh-keygenJob.sh
 # cd $HOME/AWSCICD-Terraform/jobs/
 # source ./ssh-keygenJob.sh
 
-#source ./iniSetup.sh     ##HAVE to un comment this
+source ./iniSetup.sh     ##HAVE to un comment this
 cd
 #############################
 #provisionResource Terraform
