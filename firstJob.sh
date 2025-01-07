@@ -30,6 +30,7 @@ echo "Setup complete!"
 
 ######################################################
 echo "0000000000000000000"
+cd $HOME/AWSCICD-Terraform/
 ls
 cd $HOME/AWSCICD-Terraform/
 chmod +x mainJob.sh
