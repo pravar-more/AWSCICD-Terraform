@@ -30,6 +30,10 @@ echo "-------------------------------------"
 echo "Updating package list..."
 sudo yum update -y
 
+# Install AWS-CLI
+sudo yum install aws-cli
+
+
 # Install Terraform
 sudo yum install -y yum-utils
 sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo

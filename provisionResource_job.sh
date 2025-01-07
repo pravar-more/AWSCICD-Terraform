@@ -3,9 +3,6 @@
 ###########################################################################
 ###########################################################################
 #Define Variables
-AWS_ACCESS_KEY = "AKIAQQABDQUAVYOYYA4Q"
-AWS_SECRET_KEY = "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"
-REGION = "us-east-1"
 KEY_NAME = "NVirginia_key_VBanner"
 JENKINS_MACHINE_IP = ""
 
@@ -17,10 +14,20 @@ export REGION=$REGION
 
 ######################################################
 #AWS Configure
-aws configure
-$AWS_ACCESS_KEY
-$AWS_SECRET_KEY
-$REGION
+
+#!/bin/bash
+
+# Define your AWS credentials and default region
+AWS_ACCESS_KEY = "AKIAQQABDQUAVYOYYA4Q"
+AWS_SECRET_KEY = "6s+gghOvBy5Z+z2b6Pr74np4H9N1aP/HqOd3t624"
+REGION = "us-east-1"
+# Configure AWS CLI
+aws configure set aws_access_key_id $AWS_ACCESS_KEY
+aws configure set aws_secret_access_key $AWS_SECRET_KEY
+aws configure set default.region $REGION
+
+# Verify configuration
+aws configure list
 
 
 #Provisioning Terraform Resources
