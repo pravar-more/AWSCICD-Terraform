@@ -12,14 +12,9 @@ JENKINS_MACHINE_IP = ""
 ######################################################
 #AWS Configure
 # Define your AWS credentials and default region
-AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY
-AWS_SECRET_ACCESS_KEY=$AWS_SECRET_KEY
-AWS_DEFAULT_REGION=$REGION
-
-# Export AWS keys as environment variables 
-export AWS_ACCESS_KEY_ID
-export AWS_SECRET_ACCESS_KEY
-export AWS_DEFAULT_REGION
+AWS_ACCESS_KEY_ID= $AWS_ACCESS_KEY
+AWS_SECRET_ACCESS_KEY= $AWS_SECRET_KEY
+AWS_DEFAULT_REGION= $REGION
 
 # Configure AWS CLI
 aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID
@@ -48,3 +43,8 @@ echo "The IP address of the Jenkins instance is: $JENKINS_MACHINE_IP"
 #####################################
 export JENKINS_MACHINE_IP
 echo $JENKINS_MACHINE_IP > /tmp/my_var_file
+
+# Export AWS keys as environment variables 
+export AWS_ACCESS_KEY_ID
+export AWS_SECRET_ACCESS_KEY
+export AWS_DEFAULT_REGION
