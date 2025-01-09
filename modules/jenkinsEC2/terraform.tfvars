@@ -1,7 +1,7 @@
 #provider
 
-AWS_ACCESS_KEY = ""
-AWS_SECRET_KEY = ""
+AWS_ACCESS_KEY = "AKIA23WHUNU7BHILUPHI"
+AWS_SECRET_KEY = "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"
 REGION         = "us-east-1"
 availability_zones = "us-east-1"
 #vpc_name = "CustomVPC-created"
