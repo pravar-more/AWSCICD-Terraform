@@ -1,9 +1,9 @@
 #provider
 
-AWS_ACCESS_KEY = "AKIA23WHUNU7BHILUPHI"
-AWS_SECRET_KEY = "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"
-REGION         = "us-east-1"
-availability_zones = "us-east-1"
+#AWS_ACCESS_KEY = "AKIA23WHUNU7BHILUPHI"
+#AWS_SECRET_KEY = "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"
+#REGION         = "us-east-1"
+availability_zones = "us-east-1as"
 #vpc_name = "CustomVPC-created"
 sg_name = "Custom_sg_new"
 AMI_MAP = { 
