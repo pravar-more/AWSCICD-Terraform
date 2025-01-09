@@ -5,7 +5,8 @@ cd $HOME/AWSCICD-Terraform/jobs/
 git restore .
 git fetch
 git pull origin master
-chmod +x 
+
 cd $HOME/AWSCICD-Terraform/jobs/
 chmod +x mainJob.sh
+chmod +x refresh_job.sh
 cd 
