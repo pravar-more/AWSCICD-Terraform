@@ -1,7 +1,7 @@
 #!/bin/bash
 cd $HOME/AWSCICD-Terraform/jobs/
 echo "00000000000000ini Setup"
-chmod +x iniSetup.sh destroyProvisionResources_job.sh provisionResource_job.sh ansibleJob.sh ssh-keygenJob.sh refresh_job.sh
+chmod +x iniSetup.sh destroyProvisionResource_job.sh provisionResource_job.sh ansibleJob.sh ssh-keygenJob.sh refresh_job.sh
 
 # #ssh -keygen job
 # cd $HOME/AWSCICD-Terraform/jobs/
