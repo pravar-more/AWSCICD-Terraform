@@ -13,5 +13,4 @@ AMI_MAP = {
     } 
 INSTANCE_NAME = "JenkinsEC2"
 INSTANCE_TYPE = "t2.micro"
-#KEY_NAME = "NVirginia-Key"
-KEY_NAME = "NVirginia_key_VBanner"
+KEY_NAME = "NVirginia_key_DevZops"
