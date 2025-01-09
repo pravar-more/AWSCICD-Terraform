@@ -2,6 +2,7 @@
 chmod +x destroyProvisionResource_job.sh
 cd $HOME/AWSCICD-Terraform/jobs/
 ./destroyProvisionResource_job.sh
+sleep 30
 git restore .
 git fetch
 git pull origin master
