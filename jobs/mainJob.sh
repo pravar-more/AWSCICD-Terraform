@@ -3,12 +3,14 @@ cd $HOME/AWSCICD-Terraform/jobs/
 echo "00000000000000ini Setup"
 chmod +x iniSetup.sh destroyProvisionResource_job.sh provisionResource_job.sh ansibleJob.sh ssh-keygenJob.sh refresh_job.sh
 
-# #ssh -keygen job
-# cd $HOME/AWSCICD-Terraform/jobs/
-# source ./ssh-keygenJob.sh
 
 source ./iniSetup.sh     ##HAVE to un comment this
 cd
+#############################
+#ssh -keygen job
+cd $HOME/AWSCICD-Terraform/jobs/
+source ./ssh-keygenJob.sh
+
 #############################
 #provisionResource Terraform
 cd $HOME/AWSCICD-Terraform/jobs/

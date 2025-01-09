@@ -55,7 +55,7 @@ resource "aws_security_group" "main" {
 
 resource "aws_instance" "main1" {
 #   count = length(data.aws_instance.existing_instance.id) == 0 ? 1 : 0
-    ami = lookup(var.AMI_MAP, var.REGION, "ami-005fc0f236362e99f")
+    ami = lookup(var.AMI_MAP, var.REGION, "ami-01816d07b1128cd2d")
     instance_type = var.INSTANCE_TYPE 
     key_name = var.KEY_NAME 
     vpc_security_group_ids = [aws_security_group.main.id]
