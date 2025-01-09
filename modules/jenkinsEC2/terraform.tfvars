@@ -8,7 +8,7 @@ availability_zones = "us-east-1a"
 sg_name = "Custom_sg_new"
 AMI_MAP = { 
         "us-west-2" = "ami-0abcdef1234567890" 
-        "us-east-1" = "ami-0453ec754f44f9a4a" 
+        "us-east-1" = "ami-01816d07b1128cd2d" 
         # Add other regions and their corresponding AMI IDs 
     } 
 INSTANCE_NAME = "JenkinsEC2"

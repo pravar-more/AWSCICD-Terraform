@@ -63,10 +63,7 @@ resource "aws_instance" "main1" {
     tags = {
         Name = var.INSTANCE_NAME
     }
-    user_data = <<-EOF
-        #!/bin/bash
-        sleep 80
-        ssh-keygen -t rsa -b 4096 -f /home/ubuntu/.ssh/id_rsa -N '' 
-        echo "Hello, World" > /var/www/html/index.html
-        EOF
+    
+    user_data = file("JenkinsEC2_Job.sh")
+    
  }
