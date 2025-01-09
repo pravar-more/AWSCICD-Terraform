@@ -11,15 +11,13 @@ echo "in ansibleJob.sh"
 
 ###########################################################################
 #coping ssh key to remote servers
-#ssh-copy-id $JENKINS_MACHINE_IP    ##need to work on this one  
-
-
+ssh-copy-id $JENKINS_MACHINE_IP   
 
 ###########################################################################
 #Configuring inventory1.ini file
 
 echo "[ec2Server] 
-jenkinsMachine ansible_host=$JENKINS_MACHINE_IP
+jenkinsMachine ansible_host = $JENKINS_MACHINE_IP
 [eks] 
 " > $HOME/AWSCICD-Terraform/playbooks/inventory1.ini
 cd $HOME/AWSCICD-Terraform/playbooks/
