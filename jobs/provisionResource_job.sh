@@ -3,8 +3,8 @@
 ###########################################################################
 ###########################################################################
 #Define Variables
-AWS_ACCESS_KEY = ""
-AWS_SECRET_KEY = ""
+AWS_ACCESS_KEY = "AKIA23WHUNU7BHILUPHI"
+AWS_SECRET_KEY = "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"
 REGION = "us-east-1"
 KEY_NAME = "NVirginia_key_VBanner"
 JENKINS_MACHINE_IP = ""
