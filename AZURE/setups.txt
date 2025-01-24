@@ -1,0 +1,19 @@
+####
+This is the ultimate control machine
+-------------------------------------
+###
+A job.sh is being created just run it
+
+###
+Install Terraform on this
+
+###
+Installl ansible
+hostname
+
+####
+
+TO run the .sh file
+chmod +x job.sh
+./job.sh
+
